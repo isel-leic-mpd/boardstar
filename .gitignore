@@ -1,0 +1,11 @@
+# Ignore Gradle project-specific cache directory
+.gradle
+
+# Ignore Gradle build output directory
+build
+
+# Ignore intelliJ metadata
+.idea
+
+# Ignore World weather key
+BGA_KEY.txt
