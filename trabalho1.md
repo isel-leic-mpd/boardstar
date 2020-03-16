@@ -1,6 +1,6 @@
 # Enunciado do Trabalho 1
 
-**Data limite de entrega: 13 de Abril**
+**Data limite de entrega: 6 de Abril**
 
 **Objectivos**: Prática com funções de primeira classe, expressões lambda,
 funções de ordem superior, `Iterable<T>`
