@@ -44,13 +44,14 @@ auxiliares tais como operações sobre sequências implementadas pela classe
 Implemente em `LazyQueries` as seguintes operações e **todos os testes unitários
 necessários à validação dos respectivos métodos**:
 
-1. Baseando-se nas implementações dadas nas aulas, implemente os métodos
-   `filter()`, `skip()`, `limit()`, `map()`, `generate()`, `iterate()`,
-   `count()` e `toArray()`.
+1. Baseando-se nas implementações dadas nas aulas, implemente os métodos:
+   * _factory_: `Iterable<T> generate(Supplier<T>)` e `Iterable<T> iterate(T seed, UnaryOperator<T> acc)`;
+   * operações intermédias:  `filter()`, `skip()`, `limit()`, `map()`;
+   * operações terminais: `count()` e `Object[] toArray()`.
 2. Baseando-se nas implementações dadas nas aulas, implemente os métodos
    `first()` e `max()`.
    Note que o tipo de retorno destes métodos deve ser `Optional<T>`.
-3. `last(Iterable<T> src)` - retorna o último elemento da sequência `src`.
+3. `last(Iterable<T> src)` - retorna o último elemento da sequência `src` na forma de `Optional<T>`
 4. `takeWhile(Iterable<T> src, Predicate<T> pred)` - retorna uma nova sequência
   lazy com os primeiros elementos de `src` que verificam o predicado `pred`
 5. `flatMap(Iterable<T> src, Function<T, Iterable<R>> mapper)` - retorna uma nova
