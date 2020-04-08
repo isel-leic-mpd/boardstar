@@ -108,7 +108,7 @@ iterate(…) ==> 1,2,3,..
            ==> map(dto -> model)
 ```
 
-## 4. **util** `LazyQueries::cache`
+## 4. **util** `LazyQueries::cache` (**Opcional**)
 
 Implemente em `LazyQueries` uma função utilitária `cache()` que pode ser
 aplicada a qualquer sequência retornando uma nova sequência do mesmo tipo, e.g.
