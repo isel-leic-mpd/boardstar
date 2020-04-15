@@ -43,14 +43,14 @@ assertArrayEquals(expected, actual);
 Note que os elementos das sequências resultantes de `cache()` podem ser obtidos alternadamente
 entre sequências, tal como apresenta o exemplo de intercalação de 8 acções na imagem seguinte:
 
-* 1. Obtém uma sequênca do `Supplier` retornado por `cache()`.
-* 2. e 3. Lê os valores 2 e 4 da sequência resultante de 1. que não existiam em memória e
+* 1 Obtém uma sequênca do `Supplier` retornado por `cache()`.
+* 2 e 3 Lê os valores 2 e 4 da sequência resultante de 1. que não existiam em memória e
 foram obtidos da sequência fonte (`src`) e adicionados em `mem`.
-* 4. Obtém uma nova sequênca do `Supplier` retornado por `cache()`.
-* 5. e 6. Lê os valores 2 e 4 da sequência resultante de 4. que já estavam em memória.
-* 7. Lê o valor 8 da sequência resultante de 4. que não existia em memória e
+* 4 Obtém uma nova sequênca do `Supplier` retornado por `cache()`.
+* 5 e 6 Lê os valores 2 e 4 da sequência resultante de 4. que já estavam em memória.
+* 7 Lê o valor 8 da sequência resultante de 4. que não existia em memória e
 foi obtido da sequência fonte (`src`) e adicionados em `mem`.
-* 8. Lê o valor 8 da sequência resultante de 1. que já estavam em memória.
+* 8 Lê o valor 8 da sequência resultante de 1. que já estavam em memória.
 
 <img src="assets/cache.jpg" width="800px"/> 
 
