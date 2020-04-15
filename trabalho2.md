@@ -73,7 +73,7 @@ elementos iguais (segundo o `equals`) entre `src` e `other`.
 Faça um teste unitário que verifique o funcionamento desta operações fazendo a intercepção de
 duas sequências de jogos. e.g. `intersection(searchByCategory(“War”), searchByCategory(“Adventure))`.
 
-2. Dada uma sequência `Stream<String> headers` headers e outra de conteúdos `Stream<Stream<String>> contents`
+2. Dada uma sequência `Stream<String> headers` e outra de conteúdos `Stream<Stream<String>> contents`
 obtenha uma nova sequência de `Stream<String>` que intercala os cabeçalhos `headers` com os conteúdos de `contents`.
 Faça um teste unitário para as seguintes sequências com dados :
 
