@@ -18,8 +18,8 @@ Copie do módulo `boardstar-lazy` para o módulo `boardstar-streams` todo o cont
 do sub-package `boardstar` incluindo entidades de domínio, serviços e DTOs.
 
 No módulo `boardstar-streams` substitua a utilização de:
-1. `Iterator<T>` por `Stream<T>`
-2. `Iterable<T>` por `Supplier<Stream<T>>`
+1. `Iterator<T>` por `Stream<T>`.
+2. `Iterable<T>` por `Stream<T>` ou `Supplier<Stream<T>>`.
 2. `LazyQueries` pelos métodos default de `Stream<T>`.
 
 Implemente numa nova classe auxiliar `StreamUtils` o método 
@@ -44,13 +44,13 @@ Note que os elementos das sequências resultantes de `cache()` podem ser obtidos
 entre sequências, tal como apresenta o exemplo de intercalação de 8 acções na imagem seguinte:
 
 * 1 Obtém uma sequênca do `Supplier` retornado por `cache()`.
-* 2 e 3 Lê os valores 2 e 4 da sequência resultante de 1. que não existiam em memória e
+* 2 e 3 Lê os valores `a` e `b` da sequência resultante de 1. que não existiam em memória e
 foram obtidos da sequência fonte (`src`) e adicionados em `mem`.
 * 4 Obtém uma nova sequênca do `Supplier` retornado por `cache()`.
-* 5 e 6 Lê os valores 2 e 4 da sequência resultante de 4. que já estavam em memória.
-* 7 Lê o valor 8 da sequência resultante de 4. que não existia em memória e
+* 5 e 6 Lê os valores `a` e `b` da sequência resultante de 4. que já estavam em memória.
+* 7 Lê o valor `c` da sequência resultante de 4. que não existia em memória e
 foi obtido da sequência fonte (`src`) e adicionados em `mem`.
-* 8 Lê o valor 8 da sequência resultante de 1. que já estavam em memória.
+* 8 Lê o valor `c` da sequência resultante de 1. que já estavam em memória.
 
 <img src="assets/cache.jpg" width="800px"/> 
 
