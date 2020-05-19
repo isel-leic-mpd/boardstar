@@ -39,6 +39,13 @@ a oferecer uma API assíncrona baseada no tipo
 [Observable](http://reactivex.io/RxJava/2.x/javadoc/io/reactivex/Observable.html)
 sempre que faça sentido.
 
+Os métodos `searchBy...()` de `BoardstarService` e `getGames()` do modelo de
+domínio, devem passar a receber um parâmetro inteiro que determina o número
+total de elementos da sequência retornada, permitindo assim que possam ser
+desencadeados  pedidos concorrentes à `BgaWebApi`.
+Ou seja, se for chamado o método `searchBy...(..., 270 )` de `BoardstarService`
+e se por sua vez `BgaWebApi` retornar resultados em grupos de 30 elementos,
+então serão feitos pedidos a `BgaWebApi` para as páginas de 1 a 9. 
 
 ## Parte 2
 
@@ -52,6 +59,8 @@ A aplicação deve disponibilizar as seguintes páginas:
 2.  Listagem de jogos de uma categoria ou de um artista.
     Cada jogo tem 2 links: um para a listagem dos seus artistas (página 3) e outro para a
     listagem das suas categorias (página 1 com query-string das categorias a apresentar).
+    O número de items apresentados nesta página pode ser limitado por um
+    parâmetro de _query-string_.
 3.  Listagem de artistas de um jogo. Cada artista tem um link para a listagem
     dos seus jogos (página 2).
 
