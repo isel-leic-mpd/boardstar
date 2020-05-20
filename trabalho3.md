@@ -36,7 +36,7 @@ Os métodos de `BgaWebApi` devem passar a retornar resultados na forma de
 
 Os tipos do modelo de domínio e serviço devem ser actualizados para que passem
 a oferecer uma API assíncrona baseada no tipo
-[Observable](http://reactivex.io/RxJava/2.x/javadoc/io/reactivex/Observable.html)
+[Observable](http://reactivex.io/RxJava/javadoc/io/reactivex/Observable.html)
 sempre que faça sentido.
 
 Os métodos `searchBy...()` de `BoardstarService` e `getGames()` do modelo de
