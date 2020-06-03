@@ -50,7 +50,12 @@ então serão feitos pedidos a `BgaWebApi` para as páginas de 1 a 9.
 ## Parte 2
 
 Implemente uma aplicação Web usando a tecnologia
-[VertX](https://vertx.io/docs/vertx-web/java/) com handlers assíncronos.
+com suporte para handlers assíncronos, como por exemplo 
+[javalin](https://javalin.io/),
+[VertX](https://vertx.io/docs/vertx-web/java/), 
+[Spring Web Flux](https://docs.spring.io/spring/docs/current/spring-framework-reference/web-reactive.html), 
+ou outro.
+
 A aplicação deve disponibilizar as seguintes páginas:
 
 1.  Listagem de todas as categorias de jogos.
